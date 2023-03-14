@@ -14,16 +14,6 @@ from pathlib import Path
 import os
 import sys
 
-#ENV PORT 8080
-#ENV PORT 0.0.0.0
-#EXPOSE 8080
-#PORT=8080
-#host='0.0.0.0'
-#port=int(os.environ.get('PORT', 8080))
-#port=os.environ['8080']
-port = 8080
-PORT = 8080
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
