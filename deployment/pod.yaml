@@ -15,3 +15,23 @@ spec:
       value: "mysecretkey"
     - name: PORT
       value: "80"
+    - name: DB_NAME
+      value: "mysite"
+    - name: DB_USER
+      value: "postgres"
+    - name: DB_PASSWORD
+      value: "django"   
+    - name: DB_HOST
+      value: "postgres"
+    resources:
+      requests:
+        memory: "512Mi"
+        cpu: "250m"
+      limits:
+        memory: "512Mi"
+        cpu: "500m"  
+    livenessProbe:
+      httpGet:
+        path: /polls/
+        port: 8000
+
