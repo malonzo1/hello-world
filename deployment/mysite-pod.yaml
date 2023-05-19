@@ -1,4 +1,0 @@
-livenessProbe:
-  httpGet:
-    path: /polls/
-    port: 8000

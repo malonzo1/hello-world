@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: httpd
-    image: ghcr.io/malonzo1/hello-world:milestone-4.6
+    image: ghcr.io/malonzo1/hello-world:milestone-5.0
     ports:
     - containerPort: 80
     env:
@@ -28,10 +28,14 @@ spec:
         memory: "512Mi"
         cpu: "250m"
       limits:
-        memory: "512Mi"
-        cpu: "500m"  
+        memory: "900Mi"
+        cpu: "1000m"  
     livenessProbe:
       httpGet:
         path: /polls/
-        port: 8000
+        port: 80
+      initialDelaySeconds: 30
+      periodSeconds: 60
+
+                         
 
